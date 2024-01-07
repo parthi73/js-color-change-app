@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Color</title>
+</head>
+<body>
+    <h1 class="red">My name Parthipan</h1>
+    <button>Toggle Color</button>
+    <style>
+     
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+        .pink{
+            color: rgb(234, 0, 255);
+        }
+    </style>
+
+
+    <script>
+        var btn=document.querySelector("button");
+
+        btn.onclick=function(){
+
+            var title=document.querySelector("h1");
+            var cls=title.getAttribute("class");
+
+          if(cls=="red")
+          {
+            title.classList.remove("red");
+            title.classList.add("blue");      
+          }
+          else if(cls=="blue")
+          {
+            title.classList.remove("blue");
+            title.classList.add("pink");
+          }
+          else if(cls=="pink")
+          {
+            title.classList.remove("pink");
+            title.classList.add("red");
+          }
+          else
+          {
+            title.classList.remove("blue");
+            title.classList.add("pink"); 
+          }
+        }
+    </script>
+</body>
+</html>
